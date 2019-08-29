@@ -4,7 +4,9 @@
 
   --  SELECT [Column names] 
   --  FROM [table] [abbv]
-  --  JOIN [table2] [abbv2] ON abbv.prop = abbv2.prop WHERE [Conditions];
+  --  JOIN [table2] [abbv2] 
+  --  ON abbv.prop = abbv2.prop 
+  --  WHERE [Conditions];
 
 --#1
   SELECT * -- This might not be optimal for larger sites
@@ -68,7 +70,10 @@
 
   --  SELECT [column names] 
   --  FROM [table] 
-  --  WHERE column_id IN ( SELECT column_id FROM [table2] WHERE [Condition] );
+  --  WHERE column_id 
+  --  IN ( SELECT column_id 
+  --       FROM [table2] 
+  --       WHERE [Condition] );
 
 --#1
   SELECT *
@@ -211,7 +216,8 @@
 -- / Delete Rows / --
 ---------------------
 
-  --  DELETE FROM [table] WHERE [condition]
+  --  DELETE FROM [table]
+  --  WHERE [condition]
 
 ------------------------------------------------------------------------------------------
   CREATE TABLE practice_delete ( name TEXT, type TEXT, value INTEGER );
@@ -227,16 +233,13 @@
 ------------------------------------------------------------------------------------------
 
 --#1
-DELETE 
-FROM practice_delete 
+DELETE FROM practice_delete 
 WHERE type = 'bronze';
 
 --#2
-DELETE 
-FROM practice_delete 
+DELETE FROM practice_delete 
 WHERE type = 'silver';
 
 --#3
-DELETE 
-FROM practice_delete 
+DELETE FROM practice_delete 
 WHERE value = 150;
